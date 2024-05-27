@@ -1,0 +1,37 @@
+strings = [
+    "abcqwe",
+    "def",
+    "ghiq"
+]
+# ['adg', 'beh', 'cfi', 'q q', 'w  ', 'e  ']
+#
+#
+#
+#
+#
+#
+
+
+
+n_l = []
+# finds longest string and saves it to len_longest_str
+len_longest_str = 0
+for string in strings:
+    if len(string) > len_longest_str:
+        len_longest_str = len(string)
+
+# adds spaces to make all strings the same length as the longest string
+for string in range(len(strings)):
+    if len(strings[string]) < len_longest_str:
+        t = ''
+        for i in range(len_longest_str - len(strings[string])):
+             t += ' '
+        strings[string] += t
+
+# prints strings rotated 
+for ch in range(len(strings[0])):
+    n = ''
+    for i in range(len(strings)):
+        n += strings[i][ch]
+    n_l.append(n)
+    print(n)
