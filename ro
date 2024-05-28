@@ -4,16 +4,9 @@ strings = [
     "ghiq"
 ]
 # ['adg', 'beh', 'cfi', 'q q', 'w  ', 'e  ']
-#
-#
-#
-#
-#
-#
 
 
-
-n_l = []
+new_strings = []
 # finds longest string and saves it to len_longest_str
 len_longest_str = 0
 for string in strings:
@@ -28,10 +21,10 @@ for string in range(len(strings)):
              t += ' '
         strings[string] += t
 
-# prints strings rotated 
+# prints new strings
 for ch in range(len(strings[0])):
     n = ''
     for i in range(len(strings)):
         n += strings[i][ch]
-    n_l.append(n)
-    print(n)
+    new_strings.append(n)
+print(new_strings)
